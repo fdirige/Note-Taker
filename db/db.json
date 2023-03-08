@@ -1,21 +1,8 @@
 [
-  2,
-  {
-    "title": "sdfsd",
-    "text": "sdfsdf",
-    "id": {
-      "title": "Test Title",
-      "text": "Test text"
-    }
-  },
+  4,
   {
     "title": "Groceries",
     "text": "Milk\nEggs\nApples\nPineapple\nBread\nCheese\nHam",
     "id": null
-  },
-  {
-    "title": "Target",
-    "text": "Socks\nSoap\nMop\n",
-    "id": 1
   }
 ]
