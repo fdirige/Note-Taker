@@ -1,8 +1,13 @@
 [
-  4,
+  5,
   {
     "title": "Groceries",
     "text": "Milk\nEggs\nApples\nPineapple\nBread\nCheese\nHam",
     "id": null
+  },
+  {
+    "title": "Bills",
+    "text": "Credit card\nRent\nSchool loan",
+    "id": 4
   }
 ]
