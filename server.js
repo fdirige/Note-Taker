@@ -7,6 +7,7 @@ const app = express ();
 
 const allNotes = require('./db/db.json');
 
+// Middleware for parsing JSON and urlencoded form data
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 app.use(express.static('public'));
@@ -15,6 +16,7 @@ app.get('/api/notes', (req, res) => {
     res.json(allNotes.slice(1));
 });
 
+// GET route for homepage
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
@@ -27,6 +29,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, './public/notes.html'));
 });
 
+// Create note function
 function createNote(body, notesArray) {
     const newNote = body;
     if (!Array.isArray(notesArray))
@@ -46,6 +49,7 @@ function createNote(body, notesArray) {
     return newNote;
 }
 
+//POST route for notes
 app.post('/api/notes', (req, res) => {
     const newNote = createNote(req.body, allNotes);
     res.json(newNote);
